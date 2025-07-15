@@ -1,4 +1,4 @@
-# Altered Underwater Imaging along Indian Coasts Using Hyper-Resolution
+# Altered Underwater Imaging Using Hyper-Resolution
 <h3>Overview</h3> 
 This project proposes a Hyper-resolution Generative Framework (HGF) to enhance underwater images captured along the Indian coastline. Underwater imaging in India faces unique challenges like high turbidity, sedimentation, and wavelength-dependent light absorption. Traditional enhancement methods struggle in such conditions. Our deep learning framework uses:
 
