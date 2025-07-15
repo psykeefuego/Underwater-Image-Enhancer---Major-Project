@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyper Resoluting Underwater Images</title>
+    <style>
+        body {
+            background: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin: 15px 0;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            background-color: #fafafa;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .images-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .images-container > div {
+            flex: 1;
+        }
+
+        .images-container img {
+            width: 100%;
+            max-height: 400px;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            object-fit: contain;
+        }
+
+        .metrics {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.metric {
+    font-size: 18px;
+    color: #2d3436;
+    background-color: #dff9fb;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hyper Resoluting Underwater Images</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="raw" required>
+            <br>
+            <input type="submit" value="Upload and Enhance">
+        </form>
+
+        {% if original_img and enhanced_img %}
+        <div class="images-container">
+            <div>
+                <h3>Uploaded Image</h3>
+                <img src="{{ url_for('static', filename=original_img) }}" alt="Uploaded Image">
+            </div>
+            <div>
+                <h3>Enhanced Image</h3>
+                <img src="{{ url_for('static', filename=enhanced_img) }}" alt="Enhanced Image">
+            </div>
+        </div>
+
+        <div class="metrics">
+            <div class="metric">PSNR Score: {{ psnr }} dB</div><br>
+            <div class="metric">SSIM Score: {{ ssim }}</div><br>
+            <div class="metric">UIQM Score: {{ uiqm }}</div><br>
+            <div class="metric">UCIQE Score: {{ uciqe }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
