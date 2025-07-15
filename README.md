@@ -32,6 +32,8 @@ Together, they deliver clear, high-resolution underwater visuals that improve ma
 
 * Flask (for the web interface)
 * Google Colab / AWS (optional cloud training)
+* Dataset - UIEB dataset
+
   
   --------
   <h3>Authors</h3>
@@ -40,8 +42,8 @@ Together, they deliver clear, high-resolution underwater visuals that improve ma
   <li><a href="https://github.com/Reethz30">Buddi Reethika Chovudary</a> 
   <li><a href="https://github.com/psykeefuego">Sai Keerthana Sandhiri</a>
   <li><a href="https://github.com/rohithhhhhhhhhhh">Sama Rohith Reddy</a> 
+    <li>Supervisor: Mrs. M. Gayatri — Assistant Professor, GCET</li>
 </ul>
 
-Supervisor: Mrs. M. Gayatri — Assistant Professor, GCET
 
 
